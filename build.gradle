@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.13.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.jsoup:jsoup:1.21.1'
+    implementation 'org.json:json:20250517'
+    implementation 'com.squareup.okhttp3:okhttp:5.1.0'
+    implementation("io.github.cdimascio:java-dotenv:5.2.2")
+}
+
+test {
+    useJUnitPlatform()
+}
